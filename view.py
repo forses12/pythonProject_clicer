@@ -10,6 +10,7 @@ first_place=pygame.image.load('sprites/place/place1.jpg')
 up_level=pygame.image.load('sprites/controls/up_green.png')
 first_place_1=pygame.transform.scale(first_place,[1200,800])
 up_level_1=pygame.transform.scale(up_level,[50,50])
+rect=pygame.draw.rect(screen,[255,255,255],model.a)
 def draw():
     picture = font.render(str(model.coin), True, [255,255,255])
     screen.blit(first_place_1,[0,0])
