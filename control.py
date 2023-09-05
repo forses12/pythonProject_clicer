@@ -8,7 +8,7 @@ def event_get():
             exit()
         if event.type == pygame.MOUSEBUTTONDOWN and model.a.collidepoint(event.pos):
             model.up_coin()
-            print('sxdcfvgbhnjmk,')
+
         elif (event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE) or event.type == pygame.MOUSEBUTTONDOWN:
             model.get_coin()
-            print()
+

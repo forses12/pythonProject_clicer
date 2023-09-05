@@ -1,7 +1,7 @@
 import pygame, writer
 
 pygame.init()
-print(pygame.font.get_fonts())
+
 screen = pygame.display.set_mode([1200, 800])
 font = pygame.font.SysFont('vinerhanditc', 50)
 font1 = pygame.font.SysFont('comicsansms', 25)
@@ -13,8 +13,8 @@ up_level = pygame.image.load('sprites/controls/up_green.png')
 first_place_1 = pygame.transform.scale(first_place, [1200, 800])
 up_level_1 = pygame.transform.scale(up_level, [50, 50])
 rect = pygame.draw.rect(screen, [255, 255, 255], model.a)
-n = writer.Writer('0 монет', 300, 400)
-l = writer.Writer('ЦЕНА УЛУЧШЕНИЯ 234567890', 400, 400)
+
+
 
 
 def draw():
@@ -22,8 +22,7 @@ def draw():
     how_many_get_coin = font1.render(('сколько даёт клик ' + str(model.c)), True, [0, 255, 255])
     price1 = font1.render(('цена улучшения ' + str(int(model.level_up_price))), True, [0, 255, 255])
     how_many_up = font1.render(('+ ' + str(int(model.how_many_up))), True, [0, 255, 255])
-    n.str = str(int(model.coin))
-    l.str = 'ЦЕНА УЛУЧШЕНИЯ '+str(int(model.level_up_price))
+
 
     screen.blit(first_place_1, [0, 0])
     screen.blit(up_level_1, [943, 10])
@@ -31,6 +30,6 @@ def draw():
     screen.blit(how_many_get_coin, [0, 0])
     screen.blit(price1, [700, 5])
     screen.blit(how_many_up, [700, 30])
-    n.cozdavatel()
-    l.cozdavatel()
+    model.n.paint()
+    model.l.paint()
     pygame.display.flip()
