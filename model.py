@@ -9,8 +9,12 @@ level_up_price = 10
 
 
 n = writer.Writer('у вас есть ', ' монет', 300, 500)
-l = writer.Writer('ЦЕНА УЛУЧШЕНИЯ ', ' ', 400, 400)
+l = writer.Writer('ЦЕНА УЛУЧШЕНИЯ ', ' ', 400, 400,num=10)
+
+
+
 def model():
+    print(n.my_color)
     pass
 
 
@@ -25,6 +29,7 @@ def up_coin():
         n.cozdavatel()
         l.num = level_up_price
         l.cozdavatel()
+        n.my_color='white'
 
 
 
@@ -33,6 +38,8 @@ def get_coin():
     coin += c
     n.num = coin
     n.cozdavatel()
+    n.my_color='blue'
+
 
 
 
