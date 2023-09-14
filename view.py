@@ -32,4 +32,5 @@ def draw():
     screen.blit(how_many_up, [700, 30])
     model.n.paint()
     model.l.paint()
+    model.k.paint()
     pygame.display.flip()
