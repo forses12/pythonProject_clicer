@@ -4,14 +4,14 @@ a = pygame.Rect([943, 10], [50, 50])
 level_up_price = 10
 
 n = writer.Writer('у вас есть ', ' монет', 0, 0)
-l = writer.Writer('ЦЕНА УЛУЧШЕНИЯ ', ' ', 200, 400, num=10)
-k = writer.Writer('level ', ' ', 200, 600, )
-how_many_get_coin = writer.Writer('сколько дает клик ', ' ', 200, 350, num=2)
-how_many_up = writer.Writer('+', ' ',1000,0,num=2)
+l = writer.Writer('ЦЕНА УЛУЧШЕНИЯ ', ' ', 750, 60, num=10)
+k = writer.Writer('level ', ' ', 10, 525, )
+how_many_get_coin = writer.Writer('сколько дает клик ', ' ', 0, 735, num=2)
+how_many_up = writer.Writer('+', ' ',1000,20,num=2)
 
 
 def model():
-    print(n.my_color)
+    # print(n.my_color)
     pass
 
 
