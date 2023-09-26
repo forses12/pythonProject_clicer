@@ -11,27 +11,29 @@ import model, sprite
 
 
 
-first_place = pygame.transform.scale(pygame.image.load('sprites/place/place1.jpg'), [1200, 800])
+first_place = sprite.Sprite('sprites/place/place1.jpg',800,[0,0])
+
 up_level = pygame.transform.scale(pygame.image.load('sprites/controls/up_green.png'), [50, 50])
-bomge = pygame.transform.scale(pygame.image.load('sprites/worker/worker1.png'),[613/714*200,200])
-worker= pygame.transform.scale(pygame.image.load('sprites/worker/worker2.png'),[730/1033*400,400])
 rect = pygame.draw.rect(screen, [255, 255, 255], model.a)
-h = sprite.Sprite('sprites/worker/worker2.png', [300, 300], [400, 400])
+worker1 = sprite.Sprite('sprites/worker/worker2.png',400,[300, 300])
 # h.cozdavatel()
+worker=sprite.Sprite('sprites/worker/worker1.png',240,[30,570])
 
 
 
 
 def draw():
-    screen.blit(first_place, [0, 0])
+    first_place.printer()
+
     screen.blit(up_level, [943, 10])
-    screen.blit(bomge,[10,550])
-    screen.blit(worker,[120,280])
+
 
     model.n.paint()
     model.l.paint()
     model.k.paint()
-    h.printer()
+    worker1.printer()
+    worker.printer()
+
     model.how_many_get_coin.paint()
     model.how_many_up.paint()
     pygame.display.flip()

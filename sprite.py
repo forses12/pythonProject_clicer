@@ -7,7 +7,8 @@ class Sprite:
         self.what=what
         self.size=size
         self.where=where
-        self.picture= pygame.transform.scale(pygame.image.load(self.what),self.size)
+        self.l=pygame.image.load(self.what)
+        self.picture= pygame.transform.scale(self.l,[self.l.get_width()/self.l.get_height()*size,size])
 
     def printer(self):
         pass
