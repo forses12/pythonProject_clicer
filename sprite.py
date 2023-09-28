@@ -10,7 +10,8 @@ class Sprite:
         self.l=pygame.image.load(self.what)
         self.picture= pygame.transform.scale(self.l,[self.l.get_width()/self.l.get_height()*size,size])
 
-    def printer(self):
+    def zprinter(self):
         pass
         screen.blit(self.picture,self.where)
+
 

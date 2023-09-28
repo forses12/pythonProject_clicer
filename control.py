@@ -3,6 +3,7 @@ import pygame, model
 
 def event_get():
     e = pygame.event.get()
+    model.j.events(e)
     for event in e:
         if event.type == pygame.QUIT:
             exit()

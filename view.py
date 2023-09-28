@@ -22,6 +22,7 @@ worker=sprite.Sprite('sprites/worker/worker1.png',240,[30,570])
 
 
 
+
 def draw():
     first_place.printer()
 
@@ -33,6 +34,7 @@ def draw():
     model.k.paint()
     worker1.printer()
     worker.printer()
+    model.j.painter()
 
     model.how_many_get_coin.paint()
     model.how_many_up.paint()
