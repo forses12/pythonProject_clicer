@@ -29,6 +29,7 @@ def draw():
     screen.blit(up_level, [943, 10])
 
 
+
     model.n.paint()
     model.l.paint()
     model.k.paint()
