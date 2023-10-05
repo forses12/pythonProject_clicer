@@ -8,7 +8,7 @@ l = writer.Writer('ЦЕНА УЛУЧШЕНИЯ ', ' ', 750, 60, num=10)
 k = writer.Writer('level ', ' ', 10, 525, )
 how_many_get_coin = writer.Writer('сколько дает клик ', ' ', 0, 735, num=2)
 how_many_up = writer.Writer('+', ' ',1000,20,num=2)
-j=button.Button([500,500],50,'sprites/worker/worker2.png')
+j=button.Button([500,500],50,'sprites/controls/up_yellow.png')
 
 def model():
     # print(n.my_color)

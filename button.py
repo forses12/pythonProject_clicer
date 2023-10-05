@@ -3,17 +3,24 @@ import pygame,sprite
 class Button:
     def __init__(self,where,size,what):
         self.q=sprite.Sprite(what,size,where)
+        self.rect=pygame.rect.Rect(self.q.where,self.q.picture.get_size())
+        self.width=0
 
     def painter(self):
         self.q.printer()
-        pygame.draw.rect(pygame.display.get_surface(), [31, 245, 99], pygame.rect.Rect([40, 40], [40, 60]), 1)
+        if self.width==1:
+            self.b=pygame.draw.rect(pygame.display.get_surface(), [31, 245, 99],self.rect,4)
     def events(self,event):
-        b=pygame.rect.Rect(self.q.where,[self.q.size,self.q.size])
 
 
 
         for e in event:
-            if e.type == pygame.MOUSEBUTTONDOWN and b.collidepoint(e.pos):
+            if e.type == pygame.MOUSEMOTION and self.rect.collidepoint(e.pos):
+                self.width=1
+            else:
+                self.width=0
+
+            if e.type == pygame.MOUSEBUTTONDOWN and self.rect.collidepoint(e.pos):
                 print('qazzwexsrcdtvfygbhnujmik,o')
 
 
