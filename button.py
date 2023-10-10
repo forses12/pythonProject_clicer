@@ -1,10 +1,11 @@
 import pygame,sprite
 
 class Button:
-    def __init__(self,where,size,what):
+    def __init__(self,where,size,what,work):
         self.q=sprite.Sprite(what,size,where)
         self.rect=pygame.rect.Rect(self.q.where,self.q.picture.get_size())
         self.width=0
+        self.work=work
 
     def painter(self):
         self.q.printer()
@@ -17,11 +18,13 @@ class Button:
         for e in event:
             if e.type == pygame.MOUSEMOTION and self.rect.collidepoint(e.pos):
                 self.width=1
+
             else:
                 self.width=0
 
             if e.type == pygame.MOUSEBUTTONDOWN and self.rect.collidepoint(e.pos):
-                print('qazzwexsrcdtvfygbhnujmik,o')
+                self.work()
+                event.remove(e)
 
 
 
