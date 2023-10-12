@@ -32,7 +32,9 @@ def draw():
 
     model.n.paint()
     model.l.paint()
-    model.k.paint()
+    model.l1.paint()
+    model.level_bomga.paint()
+    model.level_worker1.paint()
     worker1.printer()
     worker.printer()
     model.up_level.painter()
