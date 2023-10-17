@@ -33,6 +33,7 @@ def draw():
     model.n.paint()
     model.l.paint()
     model.l1.paint()
+    model.coin_in_second.paint()
     model.level_bomga.paint()
     model.level_worker1.paint()
     worker1.printer()

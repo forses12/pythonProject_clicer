@@ -1,7 +1,13 @@
 import pygame, writer,button
 j=1.02
+h=0
 
 def model():
+    if h!=level_worker1.number:
+        coin_in_second.number+=level_worker1.number*2
+        n.number+=coin_in_second.number
+
+
 
     pass
 
@@ -16,7 +22,7 @@ def up_coin():
         level_bomga.number += 1
         how_many_up.number += 2
 def up_worker():
-    global j
+    global j,h
     if n.number>=l1.number:
         n.number-=l1.number
         level_worker1.number+=1
@@ -33,9 +39,10 @@ def get_coin():
 a = pygame.Rect([943, 10], [50, 50])
 level_up_price = 10
 
-n = writer.Writer('у вас есть ', ' монет', 0, 0)
+n = writer.Writer('у вас есть ', ' монет', 0, 0,num=10000)
 l = writer.Writer('ЦЕНА УЛУЧШЕНИЯ ', ' ', 750, 60, num=10)
 l1 = writer.Writer('ЦЕНА УЛУЧШЕНИЯ ', ' ', 555,500, num=10000)
+coin_in_second=writer.Writer('доход в секунду:',' монет',500,300)
 level_bomga = writer.Writer('level ', ' ', 10, 525, )
 level_worker1 = writer.Writer('level ', ' ', 300,250, )
 how_many_get_coin = writer.Writer('сколько дает клик ', ' ', 0, 735, num=2)
