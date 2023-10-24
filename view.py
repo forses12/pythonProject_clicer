@@ -43,5 +43,6 @@ def draw():
     model.up_level1.painter()
 
     model.how_many_get_coin.paint()
+    model.how_many_get_coin_by_up.paint()
     model.how_many_up.paint()
     pygame.display.flip()
