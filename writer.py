@@ -6,6 +6,7 @@ font = pygame.font.SysFont('comicsansms', 25)
 
 class Writer:
     def __init__(self, str_l, str_r, x, y, num=0, color=[255, 255, 255]):
+        print('xdcfvygbh')
         self.str_l = str_l
         self.str_r = str_r
         self.x = x
@@ -17,6 +18,7 @@ class Writer:
     def cozdavatel(self):
         # print(14567890)
         self.type = font.render(self.str_l + str(int(self.num)) + self.str_r, True, self.color)
+
     def paint(self):
 
         pygame.display.get_surface().blit(self.type, [self.x, self.y])

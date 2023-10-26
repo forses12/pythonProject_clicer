@@ -6,29 +6,20 @@ screen = pygame.display.set_mode([1200, 800])
 font = pygame.font.SysFont('vinerhanditc', 50)
 font1 = pygame.font.SysFont('comicsansms', 25)
 
-import model, sprite
+import model, sprite, worker
 
-
-
-
-first_place = sprite.Sprite('sprites/place/place1.jpg',800,[0,0])
-
+first_place = sprite.Sprite('sprites/place/place1.jpg', 800, [0, 0])
 
 rect = pygame.draw.rect(screen, [255, 255, 255], model.a)
-worker1 = sprite.Sprite('sprites/worker/worker2.png',400,[300, 300])
+worker1 = sprite.Sprite('sprites/worker/worker2.png', 400, [300, 300])
+worker3 = worker.Worker('sprites/worker/worker3.png', [500, 300], 200)
+
 # h.cozdavatel()
-worker=sprite.Sprite('sprites/worker/worker1.png',240,[30,570])
-
-
-
+worker = sprite.Sprite('sprites/worker/worker1.png', 240, [30, 570])
 
 
 def draw():
     first_place.printer()
-
-
-
-
 
     model.n.paint()
     model.l.paint()
@@ -39,6 +30,7 @@ def draw():
     model.level_worker1.paint()
     worker1.printer()
     worker.printer()
+    worker3.painter()
     model.up_level.painter()
     model.up_level1.painter()
 
