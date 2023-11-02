@@ -8,6 +8,7 @@ def event_get():
     e = pygame.event.get()
     model.up_level.events(e)
     model.up_level1.events(e)
+    model.worker3.j.events(e)
     for event in e:
         if event.type == pygame.QUIT:
             exit()
