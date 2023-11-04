@@ -63,4 +63,4 @@ how_many_get_coin_by_up = writer.Writer('сколько дает клик с у�
 how_many_up = writer.Writer('+', ' ',1000,20,num=2)
 up_level=button.Button([500,500],50,'sprites/controls/up_yellow.png',up_worker)
 up_level1 = button.Button([943, 10],50,'sprites/controls/up_green.png',up_coin)
-worker3 = worker.Worker('sprites/worker/worker3.png', [500, 300], 200)
+worker3 = worker.Worker('sprites/worker/worker3.png', [500, 300], 200,n,coin_in_second)
