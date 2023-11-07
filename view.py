@@ -31,6 +31,7 @@ def draw():
     worker1.printer()
     worker.printer()
     model.worker3.painter()
+    model.worker2.painter()
     model.up_level.painter()
     model.up_level1.painter()
 
