@@ -11,7 +11,6 @@ import model, sprite, worker
 first_place = sprite.Sprite('sprites/place/place1.jpg', 800, [0, 0])
 
 rect = pygame.draw.rect(screen, [255, 255, 255], model.a)
-worker1 = sprite.Sprite('sprites/worker/worker2.png', 400, [300, 300])
 
 
 # h.cozdavatel()
@@ -23,19 +22,18 @@ def draw():
 
     model.n.paint()
     model.l.paint()
-    model.l1.paint()
+
     model.coin_in_second.paint()
-    model.how_many_up_in_second.paint()
-    # model.level_bomga.paint()
-    # model.level_worker1.paint()
-    worker1.printer()
+
+    model.level_bomga.paint()
+
     worker.printer()
     model.worker3.painter()
     model.worker2.painter()
-    model.up_level.painter()
+
     model.up_level1.painter()
 
-    model.how_many_get_coin.paint()
-    model.how_many_get_coin_by_up.paint()
+    model.how_many_get_coin_for_up.paint()
+
     model.how_many_up.paint()
     pygame.display.flip()
