@@ -7,6 +7,7 @@ pygame.time.set_timer(p, 1000)
 def event_get():
     e = pygame.event.get()
     model.up_level1.events(e)
+    model.business.event(e)
     model.worker3.event(e)
     model.worker2.event(e)
     for event in e:

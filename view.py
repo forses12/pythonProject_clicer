@@ -28,6 +28,7 @@ def draw():
     model.level_bomga.paint()
 
     worker.printer()
+    model.business.painter()
     model.worker3.painter()
     model.worker2.painter()
 

@@ -5,7 +5,7 @@ import writer
 
 
 class Worker:
-    def __init__(self, who, where, size, coin: writer.Writer,coin_in_second,price,sale,worker,visible,procent,procent_up):
+    def __init__(self, who, where, size, coin: writer.Writer,coin_in_second,price,sale,worker,visible,procent,procent_up,def_,type):
         self.who = who
         self.where = where
         self.size = size
@@ -28,6 +28,8 @@ class Worker:
         self.sale=sale
         self.procent_coin_=procent
         self.procent_coin__up=procent_up
+        self.def_=def_
+        self.type=type
     def event(self,event):
         if self.visible:
             self.j.events(event)
@@ -49,6 +51,9 @@ class Worker:
                 self.worker.visible=True
             if self.f.number==20:
                 self.procent_coin_[0]+=self.procent_coin__up
+                self.def_()
+            if self.f.number>=10 and self.type:
+                self.def_
             self.price.number*=self.procent
             self.procent+=0.02283
             self.coin_in_second.number+=self.how_many_up_in_second.number
