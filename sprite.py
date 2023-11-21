@@ -5,7 +5,7 @@ screen = pygame.display.get_surface()
 
 class Sprite:
     def __init__(self, what, size, where):
-        print('spites')
+        print(what)
         self.what = what
         self.size = size
         self.where = where

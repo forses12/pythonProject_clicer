@@ -18,6 +18,7 @@ worker = sprite.Sprite('sprites/worker/worker1.png', 240, [30, 570])
 
 
 def draw():
+    global first_place
     first_place.printer()
 
     model.n.paint()
@@ -38,3 +39,8 @@ def draw():
 
     model.how_many_up.paint()
     pygame.display.flip()
+    if model.business.visible and first_place.what!='sprites/place/place2.png':
+        first_place = sprite.Sprite('sprites/place/place2.png', 800, [0, 0])
+
+
+

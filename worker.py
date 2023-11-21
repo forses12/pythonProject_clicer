@@ -58,7 +58,7 @@ class Worker:
             self.procent+=0.02283
             self.coin_in_second.number+=self.how_many_up_in_second.number
             self.how_many_up_in_second.number=self.sale*(self.f.number+1)
-            if self.f.number > 0:
+            if self.f.number == 1:
                 self.who = self.who.replace('_inv', '')
                 self.l = sprite.Sprite(self.who, self.size, self.where)
 

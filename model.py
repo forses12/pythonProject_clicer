@@ -44,6 +44,6 @@ how_many_get_coin_for_up = writer.Writer('сколько дает клик  с �
 how_many_up = writer.Writer('+', ' ',1000,20,num=2)
 
 up_level1 = button.Button([943, 10],50,'sprites/controls/up_green.png',up_coin)
-business=worker.Worker('sprites/business/business1_1.png', [550,300], 300,n,coin_in_second,100000,20,None,False,procent,0.4,pocent_up,True)
+business=worker.Worker('sprites/business/business1_inv.png', [550,300], 300,n,coin_in_second,100000,20,None,False,procent,0.4,pocent_up,True)
 worker3 = worker.Worker('sprites/worker/worker3_inv.png', [400, 500], 200,n,coin_in_second,50000,10,business,False,procent,0.3,pocent_up,False)
 worker2=worker.Worker('sprites/worker/worker2_inv.png', [250,350], 300,n,coin_in_second,10000,2,worker3,True,procent,0.2,pocent_up,False)
