@@ -1,5 +1,4 @@
-import pygame
-
+import pygame ,wdtfghjk
 pygame.init()
 font = pygame.font.SysFont('comicsansms', 25)
 
@@ -17,7 +16,8 @@ class Writer:
 
     def cozdavatel(self):
         # print(14567890)
-        self.type = font.render(self.str_l + str(int(self.num)) + self.str_r, True, self.color)
+
+        self.type = font.render(self.str_l + wdtfghjk.rok(self.num) + self.str_r, True, self.color)
 
     def paint(self):
 
