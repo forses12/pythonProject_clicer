@@ -1,32 +1,35 @@
 import random
 def rok(j):
     m=len(str(j))
-    l=['k','m','mlr','t','tlr']
+    int(j)
+    l=['','k','m','mlr','t','tlr']
     b=[]
+    i=[]
 
 
     def lol():
         for s in range(0,m//3):
             if j//1000>0:
                 kol()
-        b.append(str(j))
+        b.append(str(int(j)))
 
-        if m%3==0:
-            for x in range(0, m // 3-1):
-                b[x] = l[x] + ' ' + b[x]
-        else:
-            for x in range(0, m // 3):
-                b[x] = l[x] + ' ' + b[x]
 
-        b.reverse()
-        o=''.join(b)
+        for x in range(0,len(b)):
+            if b[x]!='0':
+                i.append(b[x]+l[x])
+
+        i.reverse()
+        o=' '.join(i)
+
         return o
 
 
     def kol():
         nonlocal j
-        x=str(j%1000)
-        b.append(x)
+        x=int(j%1000)
+        b.append(str(x))
         j//=1000
 
     return lol()
+
+
