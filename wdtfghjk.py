@@ -15,7 +15,7 @@ def rok(j):
 
 
         for x in range(0,len(b)):
-            if b[x]!='0':
+            if x==len(b)-1 or b[x]!='0':
                 i.append(b[x]+l[x])
 
         i.reverse()
